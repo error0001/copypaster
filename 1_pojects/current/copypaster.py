@@ -6,11 +6,9 @@ def RunCp():
   print("Than Let's go")
   try:
     print("Write a directory - from: ")
-    from_dir = input()  # get dir
-    print("***************************************")
-    for crtgs in os.walk(from_dir):  # Generate a cortages
-	    print (crtgs)                  # and print whole
-    print("***************************************")
+    dir_from = input()
+    for inCartage in os.walk(dir_from):
+      print(inCartage)
     #print("Write a directory - to  : ")
     #to_dir = input()
     #print("Nice! Please wait, the copypaster is working...")
