@@ -6,6 +6,7 @@ def PrintFrame(inStr):
   print("* " + inStr + " ->")
 
 # void for show cortege
+# inDir - a directory, which you are screening
 def ShowCrtg(inDir, inAbout):
   PrintFrame("Start show cortege: " + inAbout)
   # !!!WARNING NOT REALIZATION TEST OF DIR
@@ -16,7 +17,7 @@ def ShowCrtg(inDir, inAbout):
 def CopyPaster(inFrom, inTo):
   print("* Start copy from (" + inFrom + ")")
   print("* In the direcory (" + inTo + ")")
-  shutil.copy()
+  os.path.join('\'' + inFrom, inTo)  # copy folders into new dir
 
 def RunCp():
   print("*****************************************")
@@ -34,10 +35,10 @@ def RunCp():
     dir_to = input()
     #show cortege
     ShowCrtg(dir_to,"to")
-    PrintFrame("Start copy catalog in to")
 
     # 2. Copy
-
+    PrintFrame("Start copy catalog in to")
+    CopyPaster(dir_from, dir_to)
   except OSError:
     print("We are have bad news, a directory which you was writed is false...try again!")
     
