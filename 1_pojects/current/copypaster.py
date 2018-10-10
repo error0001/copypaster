@@ -10,7 +10,7 @@ def CopyFromTo():
   mainDir = input("* Write the MAIN dir:")
 
   try:
-    os.chdir(mainDir)
+    os.chdir(mainDir) 
   except OSError:
     print("* Error of \"write MAIN dir\"")
 
